@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JS</title>
+    <style>
+        th, tr, td{
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+    </style>
+    <script>
+        function calc(){
+            momo = document.getElementById("momo");
+            pizza = document.getElementById("pizza");
+            total = document.getElementById("total");
+            console.log(momo);
+            console.log(pizza);
+            console.log(total);
+            momo_price = +momo.value * 200;
+            pizza_price = +pizza.value * 200;
+            total.value = momo_price + pizza_price;
+        }
+    </script>
+</head>
+<body>
+    <table>
+        <tr>
+            <th>Product</th>
+            <th>Price</th>
+            <th colspan="2">Quantity</th>
+        </tr>
+        <tr>
+            <th>MOMO</th>
+            <td>200</td>
+            <td><input type="text" id="momo" onkeyup="calc()"></td>
+        </tr>
+        <tr>
+            <th>Pizza</th>
+            <td>200</td>
+            <td><input type="text" id="pizza" onkeyup="calc()"></td>
+        </tr>
+    </table>
+    <span style="border: 1px solid black; padding: 2px;">Table</span>
+    <input type="text" id="total">
+</body>
+</html>

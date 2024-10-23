@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table</title>
+    <style>
+            table, tr, td, th, input{
+                padding: 1px;
+                border: 1px solid black;
+                border-collapse: collapse;
+            }
+    </style>
+</head>
+<body>
+    <form>
+    <table>
+        <tr>
+            <th>Labels</th>
+            <th>Input Fields</th>
+        </tr>
+        <tr>
+            <td>Full Name</td>
+            <td><input type="text"></td>
+        </tr>
+        <tr>
+            <td>Gender</td>
+            <td>
+                <input type="radio" name="gender">Male
+                <input type="radio" name="gender">Female
+                <input type="radio" name="gender">Others
+            </td>
+        </tr>
+        <tr>
+            <td>Email</td>
+            <td><input type="email"></td>
+        </tr>
+        <tr>
+            <td>Address</td>
+            <td><input type="text"></td>
+        </tr>
+        <tr>
+            <td>Choose Color</td>
+            <td><input type="color"></td>
+        </tr>
+        <tr>
+            <td>Upload Picture</td>
+            <td><input type="file"></td>
+        </tr>
+        <tr><td colspan="2"><input type="submit" value="Register"></td></tr>
+    </table>
+    </form>
+</body>
+</html>

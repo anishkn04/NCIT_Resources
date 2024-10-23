@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>JS2</title>
+    <style>
+        input required {
+            display: block;
+        }
+
+        input required[type="submit"] {
+            text-align: center;
+            margin: 1px auto;
+        }
+
+        span {
+            color: red;
+        }
+    </style>
+    <script>
+        function checkNull() {
+            event.preventDefault();
+            username = document.getElementById("username");
+            password = document.getElementById("password");
+            confirmPassword = document.getElementById("confirmPassword");
+            email = document.getElementById("email");
+            phone = document.getElementById("phone");
+            spans = document.getElementsByTagName("span");
+            if (username.value == "") {
+                spans[0].innerHTML = "*Required"
+            }
+            if (password.value == "") {
+                spans[3].innerHTML = "*Required"
+            }
+            if (email.value == "") {
+                spans[1].innerHTML = "*Required"
+            }
+            if (phone.value == "") {
+                spans[2].innerHTML = "*Required"
+            }
+            if (confirmPassword.value == "") {
+                spans[4].innerHTML = "*Required"
+            }
+            if (username.value.length < 8) {
+                spans[0].innerHTML = "Name must be at least 8 characters long"
+            }
+            if (phone.value.length != 10) {
+                spans[2].innerHTML = "Phone must be of 10 characters"
+            }
+            if (password.length != 8) {
+                spans[3].innerHTML = "Password must be of 8 characters";
+            }
+            if (password != confirmPassword) {
+                spans[3].innerHTML = "Password must be same";
+            }
+        }
+    </script>
+</head>
+<body>
+    <form style="border: 1px solid black; width: 20%;" novalidate onsubmit="checkNull()">
+        <h4 style="text-align: center;">Login</h4>
+        <div>Username
+            <input required name="username" id="username" type="text" placeholder="Username"><span></span>
+        </div>
+        <div>
+            Email
+            <input required name="email" id="email" type="email" placeholder="Email"><span></span>
+        </div>
+        <div>
+            Phone
+            <input required name="phone" id="phone" type="text" placeholder="Phone"><span></span>
+        </div>
+        <div>
+            Password
+            <input required name="password" id="password" type="password" placeholder="Password"><span></span>
+        </div>
+        <div>
+            Confirm Password
+            <input required name="confirmPassword" id="confirmPassword" type="password"
+                placeholder="Confirm Password"><span></span>
+        </div>
+        <input type="submit" id="submit" value="Submit" name="submit">
+    </form>
+</body>
+
+</html>

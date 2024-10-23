@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .top{
+            height: 50px;
+            background-color: black;
+            color: white;
+            text-align: center;
+            font-size: 30px;
+        }
+        .nav{
+            margin-top: 2px;
+            display: flex;
+            justify-content: space-between;
+            background-color: black;
+        }
+        ul{
+            display: flex;
+            list-style: none;
+        }
+        a{
+            color: white;
+            margin: auto 10px;
+            text-decoration: none;
+        }
+        #search{
+            justify-content: flex-end;
+            margin-left: 10px;
+            align-items: end;
+        }
+        .main{
+            display: flex;
+            height: 538px;
+            width: 100%;
+        }
+        span{
+            background-color: blue;
+            width: 33.33%;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .foot{
+            height: 20%;
+            bottom: 0;
+            background-color: black;
+            color: white;
+            text-align: center;
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="top">
+        NCIT COLLEGE
+    </div>
+    <div class="nav">
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Gallery</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+        <li id="search"><input type="text"></li>
+    </div>
+    <div class="main">
+        <span>About Yourself</span><span>Image</span><span>About Yourself</span>
+    </div>
+    <div class="foot">POKHARA UNIVERSITY</div>
+</body>
+</html>

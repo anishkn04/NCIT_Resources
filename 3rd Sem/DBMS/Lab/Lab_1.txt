@@ -1,0 +1,41 @@
+1.
+CREATE TABLE Employee(
+    E_ID int NOT NULL,
+    E_Name varchar(25) NOT NULL,
+    E_Address varchar(50),
+    D_ID int
+)
+
+
+2.
+ALTER TABLE Employee
+ADD JoinDate date;
+
+
+3.
+ALTER TABLE Employee
+MODIFY JoinDate datetime
+
+
+4.
+CREATE TABLE Department(
+    D_ID int PRIMARY KEY ,
+    D_Name varchar(15)
+)
+
+
+5.
+ALTER TABLE Employee
+ADD CONSTRAINT f_key_dep FOREIGN KEY (D_ID) REFERENCES Department(D_ID)
+
+
+6.
+ALTER TABLE Employee
+DROP JoinDate
+
+
+7.
+TRUNCATE Employee;
+ALTER TABLE Employee
+DROP FOREIGN KEY f_key_dep;
+DROP TABLE Department;

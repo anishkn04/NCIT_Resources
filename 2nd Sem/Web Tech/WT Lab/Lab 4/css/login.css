@@ -1,0 +1,60 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background: #222;
+    color: white;
+    display: flex;
+    flex-direction: column;
+}
+
+form{
+    width: 60%;
+    min-width: 300px;
+    margin: 100px auto;
+    padding: 15px auto;
+    text-align: center;
+    border: 1px solid white ;
+    border-radius: 15px;
+    border-collapse: collapse;
+}
+
+table{
+    width: 100%;
+    font-size: 20px;
+    text-align: center;
+    padding: 10px;
+    margin: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+input{
+    border-radius: 10px;
+    padding: 5px;
+}
+
+.submit{
+    padding: 5px;
+    border-radius: 10px;
+    width: 30%;
+    background-color: white;
+    color: #222;
+}
+
+.submit:hover{
+    cursor: pointer;
+    color: #ddd;
+    background-color: #444;
+}
+
+.login, .reg{
+    align-items:stretch;
+    text-align: center;
+    text-decoration: none;
+    color: lightblue;
+}
